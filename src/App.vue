@@ -15,4 +15,9 @@ export default {
 
 <style lang="scss">
 @import url('assets/reset.css');
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
 </style>
