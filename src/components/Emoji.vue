@@ -1,5 +1,5 @@
 <template>
-  <div class="emoji">{{ char }}</div>
+  <div class="emoji" @click="copyToClipboard()">{{ char }}</div>
 </template>
 
 <script>
@@ -7,6 +7,16 @@ export default {
   name: 'Emoji',
   props: {
     char: String,
+  },
+  methods: {
+    copyToClipboard() {
+      const el = document.createElement('textarea');
+      el.value = this.char;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+    },
   },
 };
 </script>
