@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "emoji.json": "^12.1.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {

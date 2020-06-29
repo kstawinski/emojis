@@ -1,5 +1,5 @@
 <template>
-  <div class="emoji" @click="copyToClipboard()">{{ char }}</div>
+  <li class="emoji" @click="copyToClipboard()">{{ char }}</li>
 </template>
 
 <script>
