@@ -1,6 +1,7 @@
 <template>
   <div class="search">
-    <input class="search_input" type="search">
+    <label class="search_label" for="search">Search</label>
+    <input class="search_input" type="search" id="search">
   </div>
 </template>
 
@@ -18,16 +19,28 @@ export default {
 .search {
   display: flex;
   align-items: center;
+  position: relative;
 
+  &_label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    font-family: sans-serif;
+    padding: 10px 15px;
+    color: gray;
+  }
   &_input {
     outline: 0;
     border: 0;
-    font-family: inherit;
-    margin-left: 15px;
+    font-family: sans-serif;
     font-size: 20px;
     color: gray;
-    border-bottom: 2px solid rgba(#000000, 0.05);
-    padding: 0 0 5px 0;
+    border: 1px solid rgba(#000, 0.05);
+    padding: 25px 15px 10px 15px;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px rgba(#000, 0.02);
   }
 }
 </style>

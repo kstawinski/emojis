@@ -17,6 +17,6 @@ export default {
 
 <style scoped lang="scss">
 .header {
-  padding: 40px 0;
+  margin-top: 40px;
 }
 </style>
