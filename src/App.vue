@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <Header />
+    <Search />
     <Content />
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header.vue';
+import Search from '@/components/Search.vue';
 import Content from '@/components/Content.vue';
 
 export default {
   name: 'App',
-  components: { Header, Content },
+  components: { Search, Content },
 };
 </script>
 
