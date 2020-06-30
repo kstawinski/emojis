@@ -28,6 +28,7 @@ export default {
   &_container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 </style>
