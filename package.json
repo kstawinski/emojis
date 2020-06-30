@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "animate.css": "^4.1.0",
     "core-js": "^3.6.4",
     "emoji.json": "^12.1.1",
     "vue": "^2.6.11"
