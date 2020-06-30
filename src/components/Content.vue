@@ -1,7 +1,7 @@
 <template>
   <main class="content">
     <ul class="container content_container">
-      <Emoji v-for="emoji in emojis" :char="emoji.char" :key="emoji.codes" />
+      <Emoji v-for="emoji in emojis" :char="emoji.char" :key="emoji.codes" :id="emoji.codes" />
     </ul>
   </main>
 </template>

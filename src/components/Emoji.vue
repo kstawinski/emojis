@@ -1,5 +1,5 @@
 <template>
-  <li class="emoji" @click="copyToClipboard()">{{ char }}</li>
+  <li class="emoji animated" @click="click(id)" :id="id">{{ char }}</li>
 </template>
 
 <script>
@@ -7,11 +7,24 @@ export default {
   name: 'Emoji',
   props: {
     char: String,
+    id: String,
   },
   methods: {
-    copyToClipboard() {
+    click(emojiId) {
+      // Copy emoji to clipboard
+      this.copyToClipboard(emojiId);
+
+      // Add class with animation after click
+      document.getElementById(emojiId).classList.add('emoji__clicked');
+
+      // Remove class with animation
+      window.setTimeout(() => {
+        document.getElementById(emojiId).classList.remove('emoji__clicked');
+      }, 800);
+    },
+    copyToClipboard(htmlId) {
       const el = document.createElement('textarea');
-      el.value = this.char;
+      el.value = document.getElementById(htmlId).innerHTML;
       document.body.appendChild(el);
       el.select();
       document.execCommand('copy');
@@ -33,8 +46,9 @@ export default {
   background: #f3f3f3;
   border-radius: 50%;
 
-    &:hover {
-      transform: scale(1.2);
+    &__clicked {
+      animation: bounceIn;
+      animation-duration: .8s;
     }
 }
 </style>
