@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Search />
-    <Content />
+    <Search @search="sendSearchValueToContent" />
+    <Content :search="search" />
   </div>
 </template>
 
@@ -12,6 +12,18 @@ import Content from '@/components/Content.vue';
 export default {
   name: 'App',
   components: { Search, Content },
+  data() {
+    return {
+      search: '',
+    };
+  },
+  methods: {
+    sendSearchValueToContent(searchContent) {
+      // Set emitted search value as `search` const
+      // And bind it to Content component
+      this.search = searchContent;
+    },
+  },
 };
 </script>
 
