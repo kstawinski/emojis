@@ -31,6 +31,7 @@ export default {
     border-radius: 3px;
     box-shadow: 0 3px 10px rgba(#000, 0.02);
     background: transparent;
+    -webkit-appearance: textfield;
   }
 }
 </style>
