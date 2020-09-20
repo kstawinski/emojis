@@ -3,6 +3,7 @@
     <input
       class="search_input"
       type="search"
+      id="search"
       @keypress="$emit('search', $event.target.value)">
   </div>
 </template>
@@ -10,6 +11,15 @@
 <script>
 export default {
   name: 'Search',
+  mounted() {
+    window.addEventListener('keyup', (event) => {
+      // On slash click
+      if (event.key === '/') {
+        // Focus input
+        document.querySelector('#search').focus();
+      }
+    });
+  },
 };
 </script>
 
