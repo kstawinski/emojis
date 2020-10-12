@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       // Bind emojiArray as emoji.json list
-      emojiArray: emoji,
+      emojiArray: [],
     };
   },
   methods: {
@@ -37,6 +37,16 @@ export default {
       // Return array with searched emoji if length > 3
       return searchArray(this.search, this.emojiArray, 'name');
     },
+  },
+  mounted() {
+    // List of blacklisted emojis
+    const blacklist = new Set(['☺️', '☺', '☹️', '☹', '☠', '❣', '❤', '🕳️', '👁‍🗨️', '👁️‍🗨', '👁‍🗨', '🗨', '🗯️']);
+
+    // Filter array
+    const filtered = emoji.filter((item) => !blacklist.has(item.char));
+
+    // Set variable with emojis as filtered list
+    this.emojiArray = filtered;
   },
 };
 </script>
