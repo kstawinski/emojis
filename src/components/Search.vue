@@ -27,7 +27,10 @@ export default {
 .search {
   display: flex;
   align-items: center;
-  padding: 40px 40px 0 40px;
+  padding: 20px 40px 30px;
+  background: linear-gradient(#fff 0%, #fff 90%, rgba(255,255,255,0) 100%);
+  position: sticky;
+  top: 0;
 
   &_input {
     outline: 0;
