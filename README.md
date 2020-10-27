@@ -3,7 +3,7 @@
 
 [🚀  **Demo link**](https://vue-emoji-picker.netlify.app/)
 
-<img src="https://i.imgur.com/01OKzWO.png" alt="" width="100%"/>
+<img src="https://user-images.githubusercontent.com/29437022/97284488-60bef400-1841-11eb-88bd-20c4cf7683a8.png" alt="" width="100%"/>
 
 ## Features
 - Fast search engine
